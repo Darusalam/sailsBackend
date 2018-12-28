@@ -30,6 +30,7 @@ module.exports = {
                 res.send(500, { err: err });
             }
             // res.redirect('/articles/list');
+            res.send({ title: title, body: body })
         })
     },
     edit: (req, res) => {
@@ -39,7 +40,7 @@ module.exports = {
             if (err) {
                 res.send(500, { err: err });
             }
-            // console.log(article);
+                // console.log(article);
                 req.send(article)
             // res.view('articles/edit',{article:article[0]});
         })
