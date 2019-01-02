@@ -40,8 +40,8 @@ module.exports = {
             if (err) {
                 res.send(500, { err: err });
             }
-                // console.log(article);
-                req.send(article)
+            // console.log(article);
+                res.send(article)
             // res.view('articles/edit',{article:article[0]});
         })
     },
