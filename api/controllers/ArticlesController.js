@@ -49,13 +49,14 @@ module.exports = {
         const title = req.body.title;
         const body = req.body.body;
         console.log(req.body);
-
-        Articles.update({ _id: req.params.id},{title: title, body: body }).exec((err) => {
+        // console.log(req.body.id);
+        
+        Articles.update({ _id: req.body.id},{title: title, body: body }).exec((err) => {
             if (err) {
                 res.send(500, { err: err });
             }
             // res.redirect('/articles/list');
-            res.send({id:req.params.id,title: title, body: body});
+            res.send({id:req.body.id,title: title, body: body});
         })
     },
     delete: (req, res) => {
