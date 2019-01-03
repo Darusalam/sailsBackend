@@ -66,7 +66,10 @@ module.exports = {
                 res.send(500, { err: err });
             }
             // res.redirect('/articles/list');
-            res.send(req.params.id);
+            const returnArticleId= {
+                id : req.params.id
+            }
+            res.send(returnArticleId);
         });
         return false;
     }
