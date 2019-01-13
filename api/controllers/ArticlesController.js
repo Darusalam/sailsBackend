@@ -14,7 +14,7 @@ module.exports = {
             res.send(articles)
             // res.view('articles/list', {
             //     articles: articles
-            // });
+            //// });
         })
     },
     add: (req, res) => {
